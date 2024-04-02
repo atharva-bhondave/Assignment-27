@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<style>
+    body{
+
+        background-color: black;
+        color: gold;
+    }
+    .txt{
+        padding-top: 100px;
+        text-align: center;
+    }
+    .active{
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .drk{
+        background-color: black;
+        color: gold;
+    }
+    .lgt{
+        background-color: gold;
+        color: black;
+    }
+    .container{
+        display: block;
+        display: flex;
+        justify-content: space-evenly;   
+        margin: 50px auto;
+    }
+    .img{
+        height: 100px;
+    }
+</style>
+<body id="body">
+    <div class="container">
+    <img src="darkmo.png" class="img" id="darkmo" onclick="dark()">
+    <img src="lightmo.png" class="img" id="lightmo" onclick="light()">
+    </div>
+    <h1 class="txt">DARK - LIGHT SWITCHING</h1>
+    <p class="txt">
+        Hey there folks today I learned how to switch baground color by using HTML CSS & JS
+    </p>
+    <script>
+        function dark(){
+            const a = document.getElementById("darkmo");
+            a.classList.add("active");
+
+            const b = document.getElementById("lightmo");
+            b.classList.remove("active");
+
+            const c = document.getElementById("body")
+            c.className = "drk"
+        }
+        function light(){
+            const a = document.getElementById("darkmo");
+            a.classList.remove("active");
+
+            const b = document.getElementById("lightmo");
+            b.classList.add("active");
+
+            const c = document.getElementById("body")
+            c.className = "lgt"
+        }
+    </script>
+</body>
+</html>
